@@ -1,0 +1,503 @@
+mainactivity:
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="firstname:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="132dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="lastname:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="208dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="age:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="272dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="username:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/registerbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="348dp"
+        android:text="register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/intbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="416dp"
+        android:text="Add post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/intview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="484dp"
+        android:text="View post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".postfeed">
+
+    <EditText
+        android:id="@+id/fpost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="544dp"
+        android:hint="Add your feed...!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/txtbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginBottom="168dp"
+        android:text="Post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/feedname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Add feed title:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewfeed">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feedlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="16dp"
+    >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvfeedname"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:text="taj mahal is beatiful"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            ></TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feed:"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:id="@+id/tvtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="taj mahal is beatiful"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            ></TextView>
+
+    </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+
+java classes;
+package com.example.crowdsource;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+import com.example.crowdsource.databinding.ActivityMainBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class MainActivity extends AppCompatActivity {
+    ActivityMainBinding binding;
+    String firstname,lastname,age,username;
+    FirebaseDatabase db;
+    DatabaseReference reference;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.registerbtn.setOnClickListener(new View.OnClickListener(){
+           @Override
+           public void onClick(View v){
+               firstname = binding.firstname.getText().toString();
+               lastname = binding.lastname.getText().toString();
+               age = binding.age.getText().toString();
+               username = binding.username.getText().toString();
+               if(!firstname.isEmpty() && !lastname.isEmpty() && !age.isEmpty() && !username.isEmpty())
+               {
+                   Users users = new Users(firstname,lastname,age,username);
+                   db=FirebaseDatabase.getInstance();
+                   reference=db.getReference("Users");
+                   reference.child(username).setValue(users).addOnCompleteListener(new OnCompleteListener<Void>() {
+                       @Override
+                       public void onComplete(@NonNull Task<Void> task) {
+                           binding.firstname.setText("");
+                           binding.lastname.setText("");
+                           binding.age.setText("");
+                           binding.username.setText("");
+                           Toast.makeText(MainActivity.this,"Updated",Toast.LENGTH_SHORT).show();
+                       }
+                   });
+               }
+           }
+        });
+        binding.intbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent send = new Intent(MainActivity.this, postfeed.class);
+                startActivity(send);
+            }
+        });
+        binding.intview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent send = new Intent(MainActivity.this, viewfeed.class);
+                startActivity(send);
+            }
+        });
+    }
+}
+package com.example.crowdsource;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+   Context context;
+   ArrayList<feed> list;
+
+    public MyAdapter(Context context, ArrayList<feed> list) {
+        this.context = context;
+        this.list = list;
+    }
+
+    @NonNull
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v= LayoutInflater.from(context).inflate(R.layout.item,parent,false);
+        return new MyViewHolder(v);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    feed feeds =list.get(position);
+    holder.feedname.setText(feeds.getFeedname());
+    holder.text.setText(feeds.getText());
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+        TextView feedname,text;
+        public MyViewHolder(@NonNull View itemView){
+            super(itemView);
+            text =itemView.findViewById(R.id.tvtext);
+            feedname =itemView.findViewById(R.id.tvfeedname);
+        }
+
+    }
+}
+package com.example.crowdsource;
+
+public class feed {
+    String text;
+    String feedname;
+
+    public feed(String text,String feedname) {
+        this.text = text;
+        this.feedname=feedname;
+    }
+    public String getFeedname() {
+        return feedname;
+    }
+    public String getText() {
+        return text;
+    }
+
+    public void setFeedname(String text) {
+        this.feedname = feedname;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public feed() {
+    }
+
+
+
+}
+package com.example.crowdsource;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.renderscript.ScriptGroup;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.crowdsource.databinding.ActivityMainBinding;
+import com.example.crowdsource.databinding.ActivityPostfeedBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class postfeed extends AppCompatActivity {
+    ActivityPostfeedBinding binding;
+    String text,feedname;
+    FirebaseDatabase db;
+    DatabaseReference reference;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityPostfeedBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.txtbtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                text =binding.fpost.getText().toString();
+                feedname =binding.feedname.getText().toString();
+                if(!text.isEmpty())
+                {
+                    feed feeds = new feed(text,feedname);
+                    db=FirebaseDatabase.getInstance();
+                    reference=db.getReference("Feeds");
+                    reference.child(feedname).setValue(feeds).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            binding.fpost.setText("");
+                            binding.feedname.setText("");
+                            Toast.makeText(postfeed.this," feed Updated",Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }
+        });
+    }
+}
+package com.example.crowdsource;
+
+public class Users {
+    String firstname,lastname,age,username;
+
+    public Users() {
+    }
+
+    public Users(String firstname, String lastname, String age, String username) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+        this.username = username;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+}
+package com.example.crowdsource;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+
+public class viewfeed extends AppCompatActivity {
+RecyclerView recyclerView;
+DatabaseReference database;
+MyAdapter myAdapter;
+ArrayList<feed> list;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_viewfeed);
+        recyclerView = findViewById(R.id.feedlist);
+        database = FirebaseDatabase.getInstance().getReference("Feeds");
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        list = new ArrayList<>();
+        myAdapter = new MyAdapter(this,list);
+        recyclerView.setAdapter(myAdapter);
+        database.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+            for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                feed feeds = dataSnapshot.getValue(feed.class);
+                list.add(feeds);
+            }
+            myAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+}
